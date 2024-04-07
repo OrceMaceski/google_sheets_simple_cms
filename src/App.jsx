@@ -5,11 +5,15 @@ import "./App.css";
 function App() {
   const [data, setData] = useState([]);
 
-  useEffect(() => {
+  const fetchSheet = async () => {
     fetch(`${import.meta.env.VITE_API_URL}`)
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error("Error fetching data:", error));
+  };
+
+  useEffect(() => {
+    fetchSheet();
   }, []);
 
   return (
@@ -22,6 +26,7 @@ function App() {
             title={item.Title}
             description={item.Description}
             author={item.Author}
+            cover={item.Cover}
           />
         ))}
       </div>
