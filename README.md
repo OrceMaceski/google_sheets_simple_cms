@@ -32,3 +32,5 @@ function doGet() {
 and click Deploy.
 
 When deployment is over an endpoint URL will be displayed to be used as an environment variable **VITE_API_URL**
+
+Google sheets 1st row contains Title, Description, Author
