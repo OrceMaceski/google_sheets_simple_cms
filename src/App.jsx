@@ -27,11 +27,21 @@ function App() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="App">
+        <h1>Data from Google Sheets</h1>
+        <div>Loading...</div>
+      </div>
+    );
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return (
+      <div className="App">
+        <h1>Data from Google Sheets</h1>
+        <div>Error: {error}</div>
+      </div>
+    );
   }
 
   return (
